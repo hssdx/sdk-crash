@@ -1,0 +1,21 @@
+PODS:
+  - TestSDK1 (0.0.1)
+  - TestSDK2 (0.0.1)
+
+DEPENDENCIES:
+  - TestSDK1 (from `../../TestSDK1`)
+  - TestSDK2 (from `../../TestSDK2`)
+
+EXTERNAL SOURCES:
+  TestSDK1:
+    :path: "../../TestSDK1"
+  TestSDK2:
+    :path: "../../TestSDK2"
+
+SPEC CHECKSUMS:
+  TestSDK1: 0296574b16b7008692a508dc5c77e6c94dced7e0
+  TestSDK2: 1108795d30969ddca3207202e1d84ed6f5142827
+
+PODFILE CHECKSUM: 9253defa6ee8fccbd665e251cdf1ff5e7ac15a7c
+
+COCOAPODS: 1.6.1

@@ -1,0 +1,14 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'WholeMusic' do
+#  pod 'XQ_DAO', '1.6-light'
+#  pod 'AFNetworking'
+#  pod 'YYKit',       :git => 'https://github.com/ibireme/YYKit.git', :branch => 'master'
+#  pod 'BlocksKit'
+#  pod 'coobjc', :path => '../../coobjc'
+#  pod 'cokit', :path => '../../coobjc'
+#  pod 'cocore', :path => '../../coobjc'
+	pod 'TestSDK1', :path => '../../TestSDK1'
+  pod 'TestSDK2', :path => '../../TestSDK2'
+end
