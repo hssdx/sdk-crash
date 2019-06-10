@@ -12,6 +12,7 @@
 		98D1861E20302A69001577EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98D1861D20302A69001577EE /* Assets.xcassets */; };
 		98D1862120302A69001577EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98D1861F20302A69001577EE /* LaunchScreen.storyboard */; };
 		98D1862420302A69001577EE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D1862320302A69001577EE /* main.m */; };
+		9F2D2C7722AE4B4500486794 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2D2C7622AE4B4500486794 /* MainViewController.m */; };
 		9F72F9DB226820DB00B3D31C /* XQExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F72F9DA226820DB00B3D31C /* XQExceptionHandler.m */; };
 		9F72F9E5226868F800B3D31C /* UIViewController+AWEAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F72F9E3226868F800B3D31C /* UIViewController+AWEAdditions.m */; };
 		9F72F9E82268694200B3D31C /* NSObject+AWEUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F72F9E62268694200B3D31C /* NSObject+AWEUtils.m */; };
@@ -28,6 +29,8 @@
 		98D1862020302A69001577EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		98D1862220302A69001577EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		98D1862320302A69001577EE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9F2D2C7522AE4B4500486794 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		9F2D2C7622AE4B4500486794 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		9F72F9D9226820DB00B3D31C /* XQExceptionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XQExceptionHandler.h; sourceTree = "<group>"; };
 		9F72F9DA226820DB00B3D31C /* XQExceptionHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XQExceptionHandler.m; sourceTree = "<group>"; };
 		9F72F9E3226868F800B3D31C /* UIViewController+AWEAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+AWEAdditions.m"; sourceTree = "<group>"; };
@@ -91,6 +94,8 @@
 				9F72F9D8226820DB00B3D31C /* Exception */,
 				98D1861420302A69001577EE /* AppDelegate.h */,
 				98D1861520302A69001577EE /* AppDelegate.m */,
+				9F2D2C7522AE4B4500486794 /* MainViewController.h */,
+				9F2D2C7622AE4B4500486794 /* MainViewController.m */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -153,7 +158,7 @@
 				TargetAttributes = {
 					98D1861020302A69001577EE = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -220,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F72F9E82268694200B3D31C /* NSObject+AWEUtils.m in Sources */,
+				9F2D2C7722AE4B4500486794 /* MainViewController.m in Sources */,
 				98D1862420302A69001577EE /* main.m in Sources */,
 				9F72F9DB226820DB00B3D31C /* XQExceptionHandler.m in Sources */,
 				9F72F9E5226868F800B3D31C /* UIViewController+AWEAdditions.m in Sources */,
@@ -358,14 +364,15 @@
 			baseConfigurationReference = D0F6CC707BEDA3E6BA3FE068 /* Pods-WholeMusic.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JZ8AHNRCVZ;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 899VRGT9G8;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = WholeMusic/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = xq.com.WholeMusic.x;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bytedance.ad.videotool;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "com.bytedance.ad.videotool Devlop";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -375,14 +382,16 @@
 			baseConfigurationReference = 5A4D1C5E5D315EAB58D41E8F /* Pods-WholeMusic.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JZ8AHNRCVZ;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 899VRGT9G8;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = WholeMusic/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = xq.com.WholeMusic.x;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bytedance.ad.videotool;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "com.bytedance.ad.videotool AdHoc";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

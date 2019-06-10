@@ -216,11 +216,11 @@ static void XQUninstallExceptionHandler(void) {
         [self.delegate exceptionHandler:self handleException:exception];
     }
     
-	if ([[exception name] isEqual:kUncaughtExceptionSignalException]){
-		kill(getpid(), [[[exception userInfo] objectForKey:kUncaughtExceptionSignalKey] intValue]);
-	}else{
-		[exception raise];
-	}
+    if ([[exception name] isEqual:kUncaughtExceptionSignalException]) {
+        kill(getpid(), [[[exception userInfo] objectForKey:kUncaughtExceptionSignalKey] intValue]);
+    }else{
+        [exception raise];
+    }
 }
 
 @end
